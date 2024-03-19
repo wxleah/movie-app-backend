@@ -87,6 +87,7 @@ app.delete("/api/movies/favorite/", async (req, res) => {
     }
 })
 
-app.listen(4000, () => {
-    console.log("server running on localhost:4000");
+const port = process.env.PORT || 4000;
+app.listen(port, () => {
+    console.log(`Serving on port ${port}`)
 })
