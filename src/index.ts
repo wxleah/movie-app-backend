@@ -1,4 +1,8 @@
-import 'dotenv/config';
+import { config } from 'dotenv'
+
+if (process.env.NODE_ENV !== 'production')
+  config ()
+
 import express from 'express';
 import cors from 'cors';
 import * as MovieAPI from './movie-api';
